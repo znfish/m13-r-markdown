@@ -1,13 +1,9 @@
-# Module 11: R Markdown
+# R Markdown
 
-
-## Overview
 R Markdown provides an extraordinary framework for dynamically creating documents, such as websites (`.html`), reports (`.pdf`), or slideshows (`ioslides/slidy`). The ability to generate such reports using analytical software eliminates the need to manually update the _results_ of a research project. As you may have guessed, R Markdown provides an ability to blend Markdown syntax and R code that, when executed, enable you to inject your results into a beautifully formatted document.  
 
-<!-- START doctoc -->
-<!-- END doctoc -->
+Helpful links:
 
-## Resources
 - [R Markdown Homepage](http://rmarkdown.rstudio.com/)
 - [R Markdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
 - [R Markdown Reference](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
@@ -15,15 +11,15 @@ R Markdown provides an extraordinary framework for dynamically creating document
 ## Getting Started
 The easiest way to start using R Markdown is by creating a new `.Rmd` document from within R Studio. Using your **File** menu, you'll want to create a new document:
 
-![create a new rmd document](imgs/new-rmd.png)
+![create a new rmd document](m13-imgs/new-rmd.png)
 
 Once you've chosen _R Markdown_ as your desired file type, you'll be prompted to choose a default _document type_ and _output format_ that you would like to create. In this module, we'll discuss creating `.html` documents (websites):
 
-![select document type](imgs/doc-type.png)
+![select document type](m13-imgs/doc-type.png)
 
 Once you have chosen your desired document type and output format, R Studio will create open up a new text document with extension `.Rmd` with sample code for you to get started with:
 
-![sample r studio code](imgs/sample-code.png)
+![sample r studio code](m13-imgs/sample-code.png)
 
 ## R Markdown Syntax
 Once you have your `.Rmd` file open in R Studio, you're ready to start writing R Markdown code. The section at the top inside the dash block (`---`) contains meta-information about how you would like to render your document. After this section, you can begin writing Markdown code using (largely) the same syntax you learned in [module-3](https://github.com/INFO-201/m3-markdown).
@@ -31,14 +27,15 @@ Once you have your `.Rmd` file open in R Studio, you're ready to start writing R
 ### Code Chunks
 What makes R Markdown distinct from simple Markdown code is the ability to actually **execute your R code**, both inline or inside of code blocks. To execute a code block, simply include `{r}` after the start of your three back-ticks (\`\`\`). For example
 
-```
+
 Write some *markdown* out here, then create a code block:
+
 ```{r}
 # Execute r code in here
 x <- 1
-``` # end with three back ticks
-Back to writing _markdown_ out here.
 ```
+
+Back to writing _markdown_ out here.
 
 Most of the configuration you'll want to do is inside the curly braces when you start your code (`{r, OPTIONS}`). The options that you specify will dictate what gets printed to the screen upon document creation. The [cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf) provides a more robust list, but most often you'll be adusting:
 
@@ -59,7 +56,7 @@ When you compile the section above, the `r 3 + 4` would be replaced with the num
 ## Compiling Documents
 Compiling documents in through the R Studio interface is quite simple. Simply click the `knit` button at the top of your code editor, and your document will be created (in the same directory as your `.Rmd` file):
 
-![knit button in r studio](imgs/knit-button.png)
+![knit button in r studio](m13-imgs/knit-button.png)
 
 While this is easy to initialize, you may find yourself encountering syntax errors, which can be a bit hard to debug. I suggest you compile your document somewhat frequently, and pay close attention to any error messages that appear in your console.
 
